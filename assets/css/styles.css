@@ -1,30 +1,27 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem; /*56px*/
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 234;
-
+  --hue: 505;
   --main-color:#24caac;
   --color-1:#eaa023;
   --color-2:#e91e63;
   --dark-800:#24292d;
   --dark-700:#2f363e;
   --white-900: #ffffff;
-
-
-  --first-color: hsl(var(--hue), 47%, 49%);
+  --shadow:0 0 15px rgba(0,0,0,.2);
+  --first-color: hsl(var(--hue), 24%, 32%);
   --first-color-alt: hsl(var(--hue), 24%, 28%);
   --first-color-light: hsl(var(--hue), 24%, 66%);
   --first-color-lighten: hsl(var(--hue), 24%, 92%);
   --title-color: hsl(var(--hue), 4%, 15%);
-  --text-color: hsl(30, 97%, 47%);
-  --text-color-light: hsl(var(--hue), 54%, 55%);
+  --text-color: hsl(var(--hue), 4%, 35%);
+  --text-color-light: hsl(var(--hue), 4%, 55%);
   --body-color: hsl(var(--hue), 0%, 100%);
   --container-color: #FFF;
 
@@ -892,9 +889,6 @@ the website, in dark theme
   .steps__container{
     grid-template-columns: repeat(2, 1fr);
   }
-  .why-us-item{
-    width: calc(100% - 30px);
-  }
 
   .product__description{
     padding: 0 4rem;
@@ -932,7 +926,6 @@ the website, in dark theme
   }
 
   .home__container,
-  .whyus-section,
   .about__container,
   .questions__container,
   .contact__container,
@@ -971,9 +964,6 @@ the website, in dark theme
   .container{
     margin-left: auto;
     margin-right: auto;
-  }
-  .why-us-item{
-    width: calc(50% - 30px);
   }
 
   .section{
@@ -1079,113 +1069,29 @@ the website, in dark theme
     right: 3rem;
   }
 }
-/* RESPONSIVE --- */
-
-@media (max-width:991px){
-  .header .nav-toggler{
-      display: flex;
-      margin-right: 15px;
-  }
-  .header .nav{
-      width: 100%;
-      position: absolute;
-      background-color: var(--dark-700);
-      top: 100%;
-      left: 0;
-      visibility: hidden;
-      opacity: 0;
-      text-align: center;
-      transition: all .3s ease-in-out;
-  }
-  .header #nav-check:checked ~ .nav{
-      visibility: visible;
-      opacity: 1;
-  }
-  .header .nav ul li{
-      margin: 0;
-      display: block;
-  }
-  .home-text h1 {
-      font-size: 35px;
-      text-align: center;
-  }
-  .home-text h1 span::after{
-      bottom: 10px;
-  }
-  .home-text .btn {
-      display: none;
-  }
-  .home-text h2{
-      font-size: 20px;
-      text-align: center;
-  }
-  .home-img{
-      margin-top: 60px;
-  }
-  .course-item,
-  .why-us-item{
-      width: calc(50% - 30px);
-  }
-  .footer-item{
-      width: 50%;
-      text-align: center;
-  }
- .footer-item p i{
-      position: relative;
-      text-align: center;
-      padding-right: 10px;
- }
-  .footer-item{
-      margin-bottom: 30px;
-  }
-}
-@media (max-width:767px){
-  .contact-img,
-  .contact-form,
-  .fun-facts-img,
-  .fun-facts-items,
-  .home-text,
-  .home-img{
-      width: 100%;
-  }
-  .contact-form,
-  .fun-facts-items{
-      margin-top: 50px;
-  }
-  .home-text h1 {
-      font-size: 30px;
-  }
-  .home-text h1 span::after{
-      bottom: 6px;
-  }
-  .home-text h2{
-      font-size: 16px;
-  }
-  .section-title h2{
-      font-size: 25px;
-  }
-  .sec-padding{
-      padding: 70px 0;
-  }
-  .footer-item{
-      text-align: center;
-  }
-  .footer-item p i{
-      position: relative;
-      text-align: center;
-      padding-right: 10px;
- }
-}
 
 
 
+/*
+--hue: 234;
+  --first-color: hsl(var(--hue), 47%, 49%);
+  --first-color-alt: hsl(var(--hue), 24%, 28%);
+  --first-color-light: hsl(var(--hue), 24%, 66%);
+  --first-color-lighten: hsl(var(--hue), 24%, 92%);
+  --title-color: hsl(var(--hue), 4%, 15%);
+  --text-color: hsl(30, 97%, 47%);
+  --text-color-light: hsl(var(--hue), 54%, 55%);
+  --body-color: hsl(var(--hue), 0%, 100%);
+
+*/
 
 
 
 
 /*whyus*/
 .whyus-section{
-  background-color: var(--dark-800);
+  background-color: --body-color;
+  
   padding-bottom:50px;
 }
 .why-us-item{
@@ -1260,7 +1166,7 @@ the website, in dark theme
   text-align: center;
   text-transform: capitalize;
   font-size: 35px;
-  color: var(--white-900);
+  color: (--title-color);
   font-weight: 600;
 }
 .section-title h2 span{
